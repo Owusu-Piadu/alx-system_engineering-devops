@@ -48,6 +48,7 @@ frontend  aysuarex.tech-https-frontend
 
 backend aysuarex.tech-backend
         balance roundrobin
-        server 189339-web-01 100.25.135.181:80 check
-        server 189339-web-02 100.25.41.112:80 check
+        server 189339-web-01 54.87.169.56:80 check
+        server 189339-web-02 100.26.20.173:80 check
+        server 189339-lb-01 54.197.21.203
 # end of parameters
