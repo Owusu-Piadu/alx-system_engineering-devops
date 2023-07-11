@@ -33,20 +33,20 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-# start of parameters for aysuarex.tech
-frontend aysuarex.tech-http-frontend
+# start of parameters for blacklee.tech
+frontend blacklee.tech-http-frontend
 	bind	 *:80
 	http-request set-header X-Forwarded-Proto http
-	default_backend	 aysuarex.tech-backend
+	default_backend	 blacklee.tech-backend
 
 
-frontend  aysuarex.tech-https-frontend
-	bind *:443 ssl crt /etc/ssl/aysuarex.tech.pem
+frontend  blacklee.tech-https-frontend
+	bind *:443 ssl crt /etc/ssl/blacklee.tech.pem
 	http-request set-header X-Forwarded-Proto https
-        default_backend aysuarex.tech-backend
+        default_backend blacklee.tech-backend
 
 
-backend aysuarex.tech-backend
+backend blacklee.tech-backend
         balance roundrobin
         server 189339-web-01 54.87.169.56:80 check
         server 189339-web-02 100.26.20.173:80 check
