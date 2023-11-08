@@ -1,0 +1,7 @@
+!/usr/bin/env bash
+# server-01 login
+
+eval $("ssh-agent")
+ssh-add ~/Desktop/ALX Program/
+
+ssh ubuntu@54.236.16.76
